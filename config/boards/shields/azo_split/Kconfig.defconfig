@@ -16,8 +16,20 @@ config ZMK_SPLIT_ROLE_CENTRAL
 config I2C
     default y
 
-config AZOTEQ_TPS43
-    bool
-    default y
+menuconfig AZOTEQ_TPS43
+    bool "Azoteq TPS43 Touchpad"
+    depends on I2C
+    help
+      Enable driver for Azoteq TPS43 I2C touchpad
+
+if AZOTEQ_TPS43
+
+config AZOTEQ_TPS43_INIT_PRIORITY
+    int "Init priority"
+    default 75
+    help
+      Device driver initialization priority
+
+endif # AZOTEQ_TPS43
 
 endif 
