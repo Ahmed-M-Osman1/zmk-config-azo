@@ -1,0 +1,9 @@
+if(CONFIG_SHIELD_AZO_SPLIT_LEFT)
+    zephyr_library()
+    zephyr_library_include_directories(${ZEPHYR_ZMKFIRMWARE_MODULE}/drivers)
+endif()
+
+if(CONFIG_SHIELD_AZO_SPLIT_RIGHT)
+    zephyr_library()
+    zephyr_library_include_directories(${ZEPHYR_ZMKFIRMWARE_MODULE}/drivers)
+endif() 
