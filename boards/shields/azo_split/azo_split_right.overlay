@@ -1,0 +1,29 @@
+#include <dt-bindings/zmk/matrix_transform.h>
+
+/ {
+    chosen {
+        zmk,kscan = &virtual_kscan;
+    };
+
+    virtual_kscan: virtual_kscan_0 {
+        compatible = "zmk,kscan-mock";
+        label = "VIRTUAL_KSCAN";
+    };
+
+    azoteq_touchpad: azoteq_touchpad {
+        compatible = "azoteq,tps43";
+        label = "TOUCHPAD";
+
+        rdy-gpios = <&gpio0 10 GPIO_ACTIVE_LOW>;
+        i2c = <&i2c0>;
+    };
+};
+
+&i2c0 {
+    status = "okay";
+    clock-frequency = <400000>;
+    
+    pinctrl-0 = <&i2c0_default>;
+    pinctrl-1 = <&i2c0_sleep>;
+    pinctrl-names = "default", "sleep";
+}; 

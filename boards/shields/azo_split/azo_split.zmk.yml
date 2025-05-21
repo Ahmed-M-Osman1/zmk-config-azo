@@ -1,0 +1,10 @@
+file_format: '1'
+id: azo_split
+name: AZO Split
+type: shield
+requires: [nice_nano_v2]
+features:
+  - keys
+siblings:
+  - azo_split_left
+  - azo_split_right

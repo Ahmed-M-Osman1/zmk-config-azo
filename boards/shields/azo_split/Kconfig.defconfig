@@ -1,0 +1,22 @@
+if SHIELD_AZO_SPLIT_LEFT
+
+config ZMK_KEYBOARD_NAME
+    default "AZO Split"
+
+endif
+
+if SHIELD_AZO_SPLIT_RIGHT
+
+config ZMK_KEYBOARD_NAME
+    default "AZO Split Right"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+config I2C
+    default y
+
+config AZOTEQ_TPS43
+    default y
+
+endif 
