@@ -17,6 +17,7 @@ config I2C
     default y
 
 config AZOTEQ_TPS43
+    bool
     default y
 
 endif 
